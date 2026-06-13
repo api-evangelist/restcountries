@@ -1,0 +1,287 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rc": "https://api.restcountries.com/vocab/",
+
+    "Country": "schema:Country",
+    "names": {
+      "@id": "rc:names",
+      "@type": "@id"
+    },
+    "common": "schema:name",
+    "official": {
+      "@id": "rc:officialName",
+      "@type": "xsd:string"
+    },
+    "alternates": {
+      "@id": "schema:alternateName",
+      "@container": "@set"
+    },
+    "native": {
+      "@id": "rc:nativeNames",
+      "@type": "@id"
+    },
+    "translations": {
+      "@id": "rc:translations",
+      "@type": "@id"
+    },
+
+    "codes": {
+      "@id": "rc:codes",
+      "@type": "@id"
+    },
+    "alpha_2": {
+      "@id": "rc:alpha2Code",
+      "@type": "xsd:string"
+    },
+    "alpha_3": {
+      "@id": "rc:alpha3Code",
+      "@type": "xsd:string"
+    },
+    "ccn3": {
+      "@id": "rc:numericCode",
+      "@type": "xsd:string"
+    },
+    "fips": {
+      "@id": "rc:fipsCode",
+      "@type": "xsd:string"
+    },
+    "cioc": {
+      "@id": "rc:iocCode",
+      "@type": "xsd:string"
+    },
+    "fifa": {
+      "@id": "rc:fifaCode",
+      "@type": "xsd:string"
+    },
+    "gec": {
+      "@id": "rc:gecCode",
+      "@type": "xsd:string"
+    },
+
+    "region": {
+      "@id": "schema:containedInPlace",
+      "@type": "xsd:string"
+    },
+    "subregion": {
+      "@id": "rc:subregion",
+      "@type": "xsd:string"
+    },
+    "continents": {
+      "@id": "rc:continent",
+      "@container": "@set"
+    },
+    "landlocked": {
+      "@id": "rc:landlocked",
+      "@type": "xsd:boolean"
+    },
+    "borders": {
+      "@id": "rc:borders",
+      "@container": "@set"
+    },
+
+    "area": {
+      "@id": "rc:area",
+      "@type": "@id"
+    },
+    "kilometers": {
+      "@id": "rc:areaKilometers",
+      "@type": "xsd:decimal"
+    },
+    "miles": {
+      "@id": "rc:areaMiles",
+      "@type": "xsd:decimal"
+    },
+
+    "coordinates": {
+      "@id": "schema:geo",
+      "@type": "@id"
+    },
+    "lat": {
+      "@id": "schema:latitude",
+      "@type": "xsd:decimal"
+    },
+    "lng": {
+      "@id": "schema:longitude",
+      "@type": "xsd:decimal"
+    },
+
+    "timezones": {
+      "@id": "rc:timezone",
+      "@container": "@set"
+    },
+    "population": {
+      "@id": "schema:population",
+      "@type": "xsd:integer"
+    },
+    "languages": {
+      "@id": "schema:knowsLanguage",
+      "@container": "@set"
+    },
+    "currencies": {
+      "@id": "rc:currencies",
+      "@type": "@id"
+    },
+    "calling_codes": {
+      "@id": "schema:telephone",
+      "@container": "@set"
+    },
+    "tlds": {
+      "@id": "rc:topLevelDomain",
+      "@container": "@set"
+    },
+
+    "capitals": {
+      "@id": "rc:capital",
+      "@container": "@set"
+    },
+    "demonyms": {
+      "@id": "rc:demonym",
+      "@type": "@id"
+    },
+
+    "flag": {
+      "@id": "rc:flag",
+      "@type": "@id"
+    },
+    "emoji": {
+      "@id": "rc:flagEmoji",
+      "@type": "xsd:string"
+    },
+    "url_png": {
+      "@id": "rc:flagUrlPng",
+      "@type": "@id"
+    },
+    "url_svg": {
+      "@id": "rc:flagUrlSvg",
+      "@type": "@id"
+    },
+
+    "memberships": {
+      "@id": "rc:memberships",
+      "@type": "@id"
+    },
+    "classification": {
+      "@id": "rc:classification",
+      "@type": "@id"
+    },
+    "sovereign": {
+      "@id": "rc:sovereign",
+      "@type": "xsd:boolean"
+    },
+    "un_member": {
+      "@id": "rc:unMember",
+      "@type": "xsd:boolean"
+    },
+    "eu": {
+      "@id": "rc:euMember",
+      "@type": "xsd:boolean"
+    },
+    "nato": {
+      "@id": "rc:natoMember",
+      "@type": "xsd:boolean"
+    },
+
+    "government_type": {
+      "@id": "rc:governmentType",
+      "@type": "xsd:string"
+    },
+    "leaders": {
+      "@id": "rc:leaders",
+      "@container": "@set"
+    },
+
+    "links": {
+      "@id": "rc:links",
+      "@type": "@id"
+    },
+    "official": {
+      "@id": "rc:officialUrl",
+      "@type": "@id"
+    },
+    "wikipedia": {
+      "@id": "schema:sameAs",
+      "@type": "@id"
+    },
+    "open_street_maps": {
+      "@id": "rc:openStreetMapsUrl",
+      "@type": "@id"
+    },
+    "google_maps": {
+      "@id": "rc:googleMapsUrl",
+      "@type": "@id"
+    },
+
+    "economy": {
+      "@id": "rc:economy",
+      "@type": "@id"
+    },
+    "gini_coefficient": {
+      "@id": "rc:giniCoefficient",
+      "@type": "@id"
+    },
+
+    "cars": {
+      "@id": "rc:cars",
+      "@type": "@id"
+    },
+    "driving_side": {
+      "@id": "rc:drivingSide",
+      "@type": "xsd:string"
+    },
+    "signs": {
+      "@id": "rc:vehicleRegistrationCode",
+      "@container": "@set"
+    },
+
+    "postal_code": {
+      "@id": "schema:PostalAddress",
+      "@type": "@id"
+    },
+    "date": {
+      "@id": "rc:dateConventions",
+      "@type": "@id"
+    },
+    "number_format": {
+      "@id": "rc:numberFormat",
+      "@type": "@id"
+    },
+    "parent": {
+      "@id": "rc:parentCountry",
+      "@type": "@id"
+    },
+
+    "meta": {
+      "@id": "rc:paginationMeta",
+      "@type": "@id"
+    },
+    "total": {
+      "@id": "rc:totalResults",
+      "@type": "xsd:integer"
+    },
+    "count": {
+      "@id": "rc:resultCount",
+      "@type": "xsd:integer"
+    },
+    "limit": {
+      "@id": "rc:pageLimit",
+      "@type": "xsd:integer"
+    },
+    "offset": {
+      "@id": "rc:pageOffset",
+      "@type": "xsd:integer"
+    },
+    "more": {
+      "@id": "rc:hasMoreResults",
+      "@type": "xsd:boolean"
+    },
+    "request_id": {
+      "@id": "rc:requestId",
+      "@type": "xsd:string"
+    }
+  }
+}

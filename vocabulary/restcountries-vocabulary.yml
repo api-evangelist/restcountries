@@ -1,0 +1,195 @@
+vocabulary:
+  - term: country
+    definition: >
+      A nation or territory with distinct political boundaries, recognized by
+      international standards. The REST Countries API covers 250+ countries
+      and dependent territories.
+    related:
+      - sovereign
+      - dependency
+      - territory
+
+  - term: alpha_2
+    definition: >
+      ISO 3166-1 alpha-2 two-letter country code (e.g., "US" for United States,
+      "DE" for Germany). The most widely-used short-form country identifier.
+    standard: ISO 3166-1
+
+  - term: alpha_3
+    definition: >
+      ISO 3166-1 alpha-3 three-letter country code (e.g., "USA", "DEU").
+      Less ambiguous than alpha_2 and preferred in many data systems.
+    standard: ISO 3166-1
+
+  - term: ccn3
+    definition: >
+      ISO 3166-1 numeric three-digit country code (e.g., "840" for the United
+      States). Used in systems requiring purely numeric identifiers.
+    standard: ISO 3166-1
+
+  - term: fips
+    definition: >
+      Federal Information Processing Standards country code, maintained by
+      the US government for geopolitical entities.
+    standard: FIPS 10-4
+
+  - term: cioc
+    definition: >
+      International Olympic Committee country code, used to identify nations
+      in Olympic competition contexts.
+
+  - term: fifa
+    definition: >
+      FIFA country code used to identify national football/soccer associations
+      and their member teams.
+
+  - term: gec
+    definition: >
+      Geopolitical Entities and Codes (GEC, formerly FIPS 10-4) country code
+      maintained by the US National Geospatial-Intelligence Agency.
+
+  - term: aggregate
+    definition: >
+      A named bundle of related searchable country properties. The API supports
+      two aggregates: "name" (bundles all name fields) and "code" (bundles all
+      code fields), enabling single-query cross-field searches.
+    values:
+      - name
+      - code
+
+  - term: region
+    definition: >
+      Major continental or geographic grouping assigned to a country. One of:
+      Africa, Americas, Asia, Europe, Oceania, or Antarctic.
+    values:
+      - Africa
+      - Americas
+      - Asia
+      - Europe
+      - Oceania
+      - Antarctic
+
+  - term: subregion
+    definition: >
+      A more granular geographic sub-grouping within a region, such as
+      "Northern America", "Western Europe", or "South-Eastern Asia".
+
+  - term: landlocked
+    definition: >
+      Boolean indicating whether a country has no coastline (no access to
+      any ocean or sea). Examples: Switzerland, Bolivia, Mongolia.
+
+  - term: borders
+    definition: >
+      Array of ISO alpha-3 codes for countries sharing a land border with
+      this country.
+
+  - term: sovereign
+    definition: >
+      A self-governing, internationally recognized independent state. Most
+      UN member states are sovereign countries.
+
+  - term: dependency
+    definition: >
+      A territory that is not fully independent but is administered by or
+      associated with a sovereign state (e.g., overseas territories,
+      crown dependencies).
+
+  - term: dependency_type
+    definition: >
+      The type of dependent relationship a territory has with its parent
+      sovereign state.
+    values:
+      - crown_dependency
+      - overseas_territory
+      - autonomous_region
+      - special_administrative_region
+      - freely_associated_state
+
+  - term: iso_status
+    definition: >
+      ISO 3166 classification of the country entry. "official" means the
+      country is formally assigned a code by ISO. "user_assigned" means
+      the code is in a range reserved for user-defined entities.
+    values:
+      - official
+      - user_assigned
+
+  - term: demonym
+    definition: >
+      The word used to describe a person from a particular country or region
+      (e.g., "American" for the United States, "German" for Germany). The API
+      provides masculine (m) and feminine (f) forms by language code.
+
+  - term: gini_coefficient
+    definition: >
+      A statistical measure of income or wealth inequality within a country,
+      ranging from 0 (perfect equality) to 100 (perfect inequality). The API
+      stores historical measurements keyed by year.
+
+  - term: calling_code
+    definition: >
+      International telephone dialing prefix required to reach a country,
+      prefixed with "+" (e.g., "+1" for the United States, "+49" for Germany).
+
+  - term: tld
+    definition: >
+      Country-code Top-Level Domain: the internet domain suffix assigned to a
+      country (e.g., ".us", ".de", ".jp").
+
+  - term: response_fields
+    definition: >
+      Query parameter accepting a comma-separated list of field names that
+      allowlists which country properties are returned, reducing response size.
+
+  - term: response_fields_omit
+    definition: >
+      Query parameter accepting a comma-separated list of field names that
+      blocklists which country properties are excluded from the response.
+
+  - term: pagination
+    definition: >
+      The REST Countries API uses offset-based pagination. Clients control
+      page size via the "limit" parameter (1-100, default 25) and navigate
+      pages via the "offset" parameter. The "meta.more" field indicates
+      whether additional records exist.
+
+  - term: membership
+    definition: >
+      Boolean flags on each country indicating participation in international
+      organizations such as the UN, EU, NATO, G7, G20, BRICS, OPEC, ASEAN,
+      and others.
+
+  - term: premium_field
+    definition: >
+      Certain data fields (notably "leaders" and some classification data) are
+      only accessible on paid API plans. Attempting to access premium fields
+      on a free plan returns a 403 Forbidden response.
+
+  - term: demo_key
+    definition: >
+      A special API key "rc_live_demo" that returns sample API responses without
+      requiring account registration, intended for testing and exploration.
+
+  - term: fiscal_year_start
+    definition: >
+      The date on which a country's fiscal (financial) year begins for
+      government, corporate, and personal accounting purposes.
+
+  - term: driving_side
+    definition: >
+      Whether vehicles in this country drive on the left or right side of
+      the road.
+    values:
+      - left
+      - right
+
+  - term: start_of_week
+    definition: >
+      The conventional first day of the calendar week in a given country
+      (typically "monday" in Europe/most of the world, "sunday" in the US).
+
+  - term: eu_region_endpoint
+    definition: >
+      Business plan customers can route requests to an EU-hosted regional
+      instance for data residency compliance purposes.

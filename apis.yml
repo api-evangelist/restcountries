@@ -32,6 +32,20 @@ apis:
     properties:
       - type: Documentation
         url: https://restcountries.com/docs
+      - type: OpenAPI
+        url: openapi/restcountries-openapi.yml
+      - type: JSONSchema
+        url: json-schema/country.json
+      - type: JSONSchema
+        url: json-schema/countries-list-response.json
+      - type: JSONSchema
+        url: json-schema/error-response.json
+      - type: JSONLDContext
+        url: json-ld/restcountries-context.jsonld
+      - type: JSONLD
+        url: json-ld/restcountries-api.jsonld
+      - type: Vocabulary
+        url: vocabulary/restcountries-vocabulary.yml
       - type: Plans
         url: plans/restcountries-plans-pricing.yml
       - type: RateLimits
