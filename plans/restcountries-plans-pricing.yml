@@ -1,0 +1,92 @@
+name: REST Countries Plans and Pricing
+description: Pricing plans for the REST Countries API, offering country data at various request volume tiers.
+url: https://restcountries.com/plans
+plans:
+  - name: Free
+    description: Free tier suitable for prototypes and small applications.
+    url: https://restcountries.com/plans
+    price: 0
+    currency: USD
+    period: month
+    features:
+      - 500 requests per month
+      - 24-hour data sync
+      - 2 API keys
+      - Access to all endpoints
+    rate_limits:
+      - 500 requests per month
+  - name: Personal
+    description: Entry-level paid plan for individual developers and small projects.
+    url: https://restcountries.com/plans
+    price: 15
+    currency: USD
+    period: month
+    price_annual: 12
+    features:
+      - 25,000 requests per month
+      - Premium data (leaders, government_type)
+      - 8-hour data sync
+      - Up to 5 API keys
+      - 99.9% uptime SLA
+      - Priority email support (24-hour response)
+      - Commercial projects supported
+    rate_limits:
+      - 25,000 requests per month
+  - name: Professional
+    description: Most popular plan for professional developers and growing applications.
+    url: https://restcountries.com/plans
+    price: 30
+    currency: USD
+    period: month
+    price_annual: 24
+    features:
+      - 100,000 requests per month
+      - Premium data (leaders, government_type)
+      - 4-hour data sync
+      - Unlimited API keys
+      - 99.95% uptime SLA
+      - Priority email support (12-hour response)
+      - Commercial projects supported
+    rate_limits:
+      - 100,000 requests per month
+  - name: Startup
+    description: High-volume plan for startups and growing businesses.
+    url: https://restcountries.com/plans
+    price: 50
+    currency: USD
+    period: month
+    price_annual: 40
+    features:
+      - 200,000 requests per month
+      - Premium data (leaders, government_type)
+      - 4-hour data sync
+      - Unlimited API keys
+      - 99.99% uptime SLA
+      - Priority email support (8-hour response)
+      - Google Meet support
+      - Commercial projects supported
+    rate_limits:
+      - 200,000 requests per month
+  - name: Business
+    description: Enterprise-grade plan for high-volume production applications.
+    url: https://restcountries.com/plans
+    price: 120
+    currency: USD
+    period: month
+    price_annual: 96
+    features:
+      - 750,000 requests per month
+      - Premium data (leaders, government_type)
+      - 4-hour data sync
+      - Unlimited API keys
+      - 99.995% uptime SLA
+      - Priority email support (4-hour response)
+      - Google Meet support
+      - Webhook notifications
+      - EU endpoints
+      - Dedicated low-latency endpoint
+      - Team access
+      - Audit logs
+      - Commercial projects supported
+    rate_limits:
+      - 750,000 requests per month

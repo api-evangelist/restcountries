@@ -1,0 +1,34 @@
+name: REST Countries Rate Limits
+description: Monthly request quotas for the REST Countries API by plan tier. Limits reset on the billing anniversary date.
+url: https://restcountries.com/plans
+rate_limits:
+  - plan: Free
+    requests: 500
+    period: month
+    notes: Soft limit; alerts triggered at 50%, 80%, and 100%. Account freezes after grace period expires.
+  - plan: Personal
+    requests: 25000
+    period: month
+    notes: Soft limit; alerts triggered at 50%, 80%, and 100%. Account freezes after grace period expires.
+  - plan: Professional
+    requests: 100000
+    period: month
+    notes: Soft limit; alerts triggered at 50%, 80%, and 100%. Account freezes after grace period expires.
+  - plan: Startup
+    requests: 200000
+    period: month
+    notes: Soft limit; alerts triggered at 50%, 80%, and 100%. Account freezes after grace period expires.
+  - plan: Business
+    requests: 750000
+    period: month
+    notes: Soft limit; alerts triggered at 50%, 80%, and 100%. Account freezes after grace period expires.
+enforcement:
+  - type: monthly_quota
+    description: Monthly request limits reset on billing anniversary. Soft limits send email alerts at 50%, 80%, and 100% usage. Accounts are frozen after a grace period once the 100% limit is reached.
+  - type: bearer_token
+    description: API key required as Bearer token in Authorization header. Demo key rc_live_demo available for testing without an account.
+additional_notes:
+  - All endpoints are read-only GET requests.
+  - Average response time is under 150 milliseconds.
+  - Over 5 million daily requests served across all tiers.
+  - CORS can be configured per API key via the dashboard.

@@ -1,0 +1,62 @@
+aid: restcountries
+name: REST Countries
+description: Free REST API providing comprehensive data about world countries including name, capital, currencies, languages, flags, population, and geographic information. Covers 250+ countries and dependencies with 80+ fields per country, updated from 35+ authoritative sources.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/restcountries/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+type: Index
+tags:
+  - Countries
+  - Geography
+  - World Data
+  - Flags
+  - Currencies
+  - Languages
+  - Population
+apis:
+  - aid: restcountries:rest-countries
+    name: REST Countries API
+    description: RESTful API providing normalized country data including names, capitals, currencies, languages, borders, flags, population, memberships, and geographic information for 250+ countries.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://restcountries.com
+    baseURL: https://api.restcountries.com/countries/v5
+    tags:
+      - Countries
+      - Geography
+      - World Data
+      - Flags
+      - Currencies
+      - Languages
+    properties:
+      - type: Documentation
+        url: https://restcountries.com/docs
+      - type: Plans
+        url: plans/restcountries-plans-pricing.yml
+      - type: RateLimits
+        url: rate-limits/restcountries-rate-limits.yml
+      - type: FinOps
+        url: finops/restcountries-finops.yml
+      - type: StatusPage
+        url: https://status.restcountries.com
+common:
+  - type: Website
+    url: https://restcountries.com
+  - type: Documentation
+    url: https://restcountries.com/docs
+  - type: GitHubOrg
+    url: https://github.com/apilayer/restcountries
+  - type: Pricing
+    url: https://restcountries.com/plans
+  - type: StatusPage
+    url: https://status.restcountries.com
+  - type: Plans
+    url: plans/restcountries-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/restcountries-rate-limits.yml
+  - type: FinOps
+    url: finops/restcountries-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
