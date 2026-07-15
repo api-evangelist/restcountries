@@ -55,6 +55,8 @@ apis:
       - type: StatusPage
         url: https://status.restcountries.com
 common:
+  - type: AgenticAccess
+    url: agentic-access/restcountries-agentic-access.yml
   - type: DomainSecurity
     url: security/restcountries-domain-security.yml
   - type: Authentication
