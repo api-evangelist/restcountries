@@ -1,7 +1,20 @@
 aid: restcountries
 name: REST Countries
 description: Free REST API providing comprehensive data about world countries including name, capital, currencies, languages, flags, population, and geographic information. Covers 250+ countries and dependencies with 80+ fields per country, updated from 35+ authoritative sources.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/restcountries.png
 url: https://raw.githubusercontent.com/api-evangelist/restcountries/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -16,44 +29,38 @@ tags:
   - Languages
   - Population
 apis:
-  - aid: restcountries:rest-countries
-    name: REST Countries API
-    description: RESTful API providing normalized country data including names, capitals, currencies, languages, borders, flags, population, memberships, and geographic information for 250+ countries.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://restcountries.com
-    baseURL: https://api.restcountries.com/countries/v5
-    tags:
-      - Countries
-      - Geography
-      - World Data
-      - Flags
-      - Currencies
-      - Languages
-    properties:
-      - type: Documentation
-        url: https://restcountries.com/docs
-      - type: OpenAPI
-        url: openapi/restcountries-openapi.yml
-      - type: JSONSchema
-        url: json-schema/country.json
-      - type: JSONSchema
-        url: json-schema/countries-list-response.json
-      - type: JSONSchema
-        url: json-schema/error-response.json
-      - type: JSONLDContext
-        url: json-ld/restcountries-context.jsonld
-      - type: JSONLD
-        url: json-ld/restcountries-api.jsonld
-      - type: Vocabulary
-        url: vocabulary/restcountries-vocabulary.yml
-      - type: Plans
-        url: plans/restcountries-plans-pricing.yml
-      - type: RateLimits
-        url: rate-limits/restcountries-rate-limits.yml
-      - type: FinOps
-        url: finops/restcountries-finops.yml
-      - type: StatusPage
-        url: https://status.restcountries.com
+- aid: restcountries:restcountries-countries-api
+  name: REST Countries Countries API
+  description: Country lookup and search endpoints
+  humanURL: https://restcountries.com
+  baseURL: https://api.restcountries.com/countries/v5
+  tags:
+  - Countries
+  properties:
+  - type: OpenAPI
+    url: openapi/restcountries-countries-api-openapi.yml
+  - type: Documentation
+    url: https://restcountries.com/docs
+  - type: JSONSchema
+    url: json-schema/country.json
+  - type: JSONSchema
+    url: json-schema/countries-list-response.json
+  - type: JSONSchema
+    url: json-schema/error-response.json
+  - type: JSONLDContext
+    url: json-ld/restcountries-context.jsonld
+  - type: JSONLD
+    url: json-ld/restcountries-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/restcountries-vocabulary.yml
+  - type: Plans
+    url: plans/restcountries-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/restcountries-rate-limits.yml
+  - type: FinOps
+    url: finops/restcountries-finops.yml
+  - type: StatusPage
+    url: https://status.restcountries.com
 common:
   - type: AgenticAccess
     url: agentic-access/restcountries-agentic-access.yml
