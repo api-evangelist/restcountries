@@ -1,0 +1,14 @@
+{
+  "provider": "restcountries",
+  "sources": [
+    "restcountries-countries-api-openapi.yml"
+  ],
+  "outputs": [
+    "restcountries-countries-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
